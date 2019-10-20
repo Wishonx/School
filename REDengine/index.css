@@ -1,0 +1,454 @@
+body {
+    animation: pulse 20s infinite ease-in-out;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-image: linear-gradient(-45deg, rgb(48, 39, 99), rgb(51, 21, 21));
+    background-size: 500%;
+    font-family: rel;
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: re;
+    src: url("fonts/re.otf");
+}
+
+@font-face {
+    font-family: rel;
+    src: url("fonts/gilroy-light.otf");
+}
+
+@keyframes pulse {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+
+.container {
+    height: 35em;
+    width: 65em;
+    background-color: rgb(37, 37, 37);
+    position: absolute;
+    bottom: 0px;
+    top: 0px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    box-shadow: 0px 0px 15px 5px #7b7b7e;
+    border-radius: 7px;
+
+}
+
+.back {
+    display: none;
+}
+
+.triangle {
+    width: 7em; 
+    height: 7em; 
+    clip-path: polygon(10% 0, 100% 90%, 100% 0);
+    animation: pulse 20s infinite;
+    background-image: linear-gradient(-45deg, rgb(51, 21, 21), rgb(48, 39, 99));
+    float: right;
+    background-size: 500%;
+    transition: 1s;
+    border: 1px solid transparent;
+    z-index: 1000;
+    position: relative;
+}
+
+.triangle:hover {
+    transition: 1s;
+    border: 10px solid transparent;
+    cursor: pointer;
+}
+
+.show {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    display: none;
+}
+
+.redengine {
+    display: inline-block;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-color: black;
+    transition: .3s;
+}
+
+.redengine p::before {
+    content: 'RED';
+    font-family: re;
+    top: 3px;
+    position: relative;
+}
+
+.redengine p::after {
+    color: rgb(122, 0, 37);
+    font-family: re;
+    position: relative;
+    left: 3px;
+    bottom: 2px;
+    font-size: .9em;
+}
+
+.redengine_1 p::after {
+    content: "1";
+}
+
+.redengine_2 p::after {
+    content: "2";
+}
+
+.redengine_3 p::after {
+    content: "3";
+}
+
+.redengine_4 p::after {
+    content: "4";
+}
+
+.redengine p {
+    color: rgb(187, 187, 187);
+    font-family: rel;
+    font-size: 1.5em;
+    transition: .3s;
+    text-shadow:0px 1px 0 rgb(0,0,0),0px -1px 0 rgb(0,0,0),1px 0px 0 rgb(0,0,0),-1px 0px 0 rgb(0,0,0),1px 1px 0 rgb(0,0,0),1px -1px 0 rgb(0,0,0),-1px 1px 0 rgb(0,0,0),-1px -1px 0 rgb(0,0,0),2px 2px 1px rgba(0,0,0,.5);
+}
+
+.redengine:hover p {
+    font-size: 1.6em;
+    transition: .3s;
+}
+
+.redengine:hover {
+    background-size: 31%;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.redengine_1 {
+    height: 100%;
+    width: 100%;
+    background-image: url(images/w1_1.jpg);
+    background-size: 81%;
+    background-position: -250px;
+    clip-path: polygon(0% 0%, 32% 0, 10% 100%, 0% 100%);
+}
+
+.redengine_1 p {
+    margin-left: 2%;
+    margin-top: 1.5%;
+}
+
+.redengine_1:hover {
+    background-size: 87%;
+}
+
+.redengine_2 {
+    height: 100%;
+    width: 100%;
+    background-image: url(images/w2_2.jpg);
+    background-position: 98px;
+    background-size: 51%;
+    clip-path: polygon(32% 0%, 61% 0, 39% 100%, 10% 100%);
+    display: non;
+
+}
+
+.redengine_2:hover {
+    background-size: 55%;
+}
+
+.redengine_2 p {
+    margin-left: 33%;
+    margin-top: 1.5%;
+}
+
+.redengine_3 {
+    height: 100%;
+    width: 100%;
+    background-image: url(images/w3_2.jpg);
+    background-position: 20px;
+    background-size: 91%;
+    clip-path: polygon(90% 0%, 61% 0, 39% 100%, 68% 100%);
+    display: ;
+
+
+}
+
+.redengine_3 p {
+    margin-left: 42.5%;
+    margin-top: 49.3%;
+}
+
+.redengine_3:hover {
+    background-size: 97%;
+}
+
+.redengine_4 {
+    height: 100%;
+    width: 100%;
+    background-image: url(images/cp_2.jpg);
+    background-position: 620px;
+    background-size: 91%;
+    clip-path: polygon(90% 0, 100% 0, 100% 100%, 68% 100%);
+}
+
+.redengine_4 p {
+    margin-left: 71.2%;
+    margin-top: 49.3%;
+}
+
+.redengine_4:hover {
+    background-size: 97%;
+}
+
+.video {
+    width: 65em;
+    height: 35em;
+    display: none;
+    z-index: 120;
+    position: absolute;
+    background-color: rgb(0,0,0);
+}
+
+.video img {
+    width: 60%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+}
+
+.video_4-close img {
+    width: 80%;
+}
+
+.video_3-close img {
+    top: 50px;
+}
+
+.video_1 {
+    animation: show1 1s;
+}
+
+.video_1-close {
+    animation: close1 1s;
+    display: none;
+}
+
+.video_2 {
+    animation: show2 1s;
+}
+
+.video_2-close {
+    animation: close2 1s;
+    display: none;
+}
+
+.video_3 {
+    animation: show3 1s;
+}
+
+.video_3-close {
+    animation: close3 1s;
+    display: none;
+}
+
+.video_4 {
+    animation: show4 1s;
+}
+
+.video_4-close {
+    animation: close4 1s;
+    display: none;
+}
+
+@keyframes show1 {
+    0% {
+        clip-path: polygon(0% 0%, 32% 0, 10% 100%, 0% 100%);
+    }
+    100% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
+    }
+}
+
+@keyframes close1 {
+    0% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    100% {
+        clip-path: polygon(0% 0%, 32% 0, 10% 100%, 0% 100%);
+
+    }
+}
+
+@keyframes show2 {
+    0% {
+        clip-path: polygon(32% 0%, 61% 0, 39% 100%, 10% 100%);
+    }
+    100% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
+    }
+}
+
+@keyframes close2 {
+    0% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    100% {
+        clip-path: polygon(32% 0%, 61% 0, 39% 100%, 10% 100%);
+
+    }
+}
+
+@keyframes show3 {
+    0% {
+        clip-path: polygon(90% 0%, 61% 0, 39% 100%, 68% 100%);
+    }
+    100% {
+        clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+    }
+}
+
+@keyframes close3 {
+    0% {
+        clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+    }
+    100% {
+        clip-path: polygon(90% 0%, 61% 0, 39% 100%, 68% 100%);
+    }
+}
+
+@keyframes show4 {
+    0% {
+        clip-path: polygon(90% 0, 100% 0, 100% 100%, 68% 100%);
+    }
+    100% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+    }
+}
+
+@keyframes close4 {
+    0% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    100% {
+        clip-path: polygon(90% 0, 100% 0, 100% 100%, 68% 100%);
+
+    }
+}
+
+.content {
+    width: 98%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 50% 10%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: rgb(187, 187, 187);
+}
+
+.left {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 14% 36%;
+    position: absolute;
+}
+
+.left img {
+    width: 30%;
+    position: absolute;
+    margin-left: 90px;
+    margin-top: 10px;
+
+}
+
+.left li {
+    border-top: 1px solid rgb(209, 209, 209);
+}
+
+.left p {
+    padding: 10px 0px;
+}
+
+.left ul {
+    margin-top: 150px;
+    list-style: none;
+    padding: 0;
+}
+
+.first li {
+    text-align: center;
+    font-family: rel;
+}
+
+.first ul {
+    margin-left: -9px;
+
+}
+
+.left div {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.second li {
+    border-image: linear-gradient(to right, rgb(209,209,209) 0%, rgb(37,37,37) 100%);
+    border-image-slice: 1;
+}
+
+.right {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-left: 510px;
+}
+
+h1 {
+    font-size: 1.6em;
+    text-align: center;
+    margin-bottom: -10px;
+    margin-top: 10px
+}
+
+.right li, p {
+    font-size: .94em;
+}
+
+.right p {
+    text-align: center;
+}
+
+.info{
+    width: 100%;
+    height: 75%;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+}
+
+
+
+

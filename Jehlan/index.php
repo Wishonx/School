@@ -1,6 +1,6 @@
 <?php
 require "Jehlan.php";
 
-$jehlan = new Jehlan(10,5);
+$jehlan = new Jehlan();
 
 echo $jehlan->info();

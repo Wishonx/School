@@ -1,0 +1,32 @@
+body {
+  background-color: #292929;
+  text-align: center;
+  color: #adadad;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.col {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-color: #8300a3;
+  border-left: 2px solid black;
+  -webkit-transition: .3s;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.col:hover {
+  background-color: #5a0063;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.bomb {
+  background-color: white;
+}
+
+.bomb:hover {
+  background-color: #9b9b9b;
+}
+/*# sourceMappingURL=minesweeper.css.map */
